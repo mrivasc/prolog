@@ -8,6 +8,7 @@ es_par(0) :- !.
 % El objetivo de esta regla recursiva es llegar a 0, que es par.
 es_par(N) :-
     N > 0,
+    % N2 is N-2
     is(N2, -(N, 2)),
     es_par(N2).
 
